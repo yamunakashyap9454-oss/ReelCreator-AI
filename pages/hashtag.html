@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Hashtag Generator | ReelCreator AI</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -13,108 +24,135 @@
 
 <header>
 
+<div class="container">
+
 <nav class="navbar">
 
-<div class="logo">
-#️⃣ ReelCreator AI
-</div>
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-hashtag"></i>
+
+<span>ReelCreator AI</span>
+
+</a>
 
 <ul class="menu">
+
 <li><a href="../index.html">Home</a></li>
-<li><a href="#">Hashtag AI</a></li>
+
+<li><a href="../index.html#tools">Tools</a></li>
+
 </ul>
 
+<button class="theme-btn">🌙</button>
+
 </nav>
+
+</div>
 
 </header>
 
 <section class="hero">
 
-<h1>#️⃣ AI Hashtag Generator</h1>
+<div class="container">
 
-<p>Generate trending hashtags in seconds.</p>
+<div class="hero-content">
 
-</section>
+<span class="hero-tag">
+🔥 AI Hashtag Generator
+</span>
 
-<section class="tools">
+<h1>Generate Trending Hashtags</h1>
 
-<div class="tool-card">
-
-<h2>Create Hashtags</h2>
-
-<label>Topic</label>
-
-<input
-type="text"
-id="topic"
-placeholder="Example: Love, Rain, Fitness">
-
-<br><br>
-
-<label>Platform</label>
-
-<select id="platform">
-<option>Instagram</option>
-<option>YouTube</option>
-<option>Facebook</option>
-<option>Threads</option>
-</select>
-
-<br><br>
-
-<button id="hashtagBtn">
-Generate Hashtags
-</button>
-
-<div id="output"></div>
-
-</div>
-
-</section>
-<div class="tool-card">
-
-<h2>🚀 Demo Hashtags</h2>
-
-<div id="demoResult">
-
-<p><b>Topic:</b> <span id="showTopic">-</span></p>
-
-<p style="margin-top:15px;">
-#reels #instagram #viral #trending #explore
-#fyp #love #creator #reelkarofeelkaro #india
+<p>
+Find the best hashtags for Instagram Reels, Posts and Shorts in seconds.
 </p>
 
 </div>
 
 </div>
 
-<section class="tips">
+</section>
+
+<section class="tools">
+
+<div class="container">
+
+<div class="tool-card">
+
+<h2 style="margin-bottom:25px;">
+# Create Hashtags
+</h2>
+<label for="hashtagInput">Enter Topic</label>
+
+<input
+type="text"
+id="hashtagInput"
+placeholder="Example: Travel, Fitness, Love">
+
+<br><br>
+
+<div class="hero-buttons">
+
+<button
+id="hashtagBtn"
+class="btn btn-primary">
+
+🔥 Generate Hashtags
+
+</button>
+
+<button
+id="copyHashtagBtn"
+class="btn btn-secondary">
+
+📋 Copy Hashtags
+
+</button>
+
+</div>
+
+<br>
+
+<div id="hashtagOutput" class="result-box">
+
+🔥 Your trending hashtags will appear here...
+
+</div>
+</div>
+
+<div style="margin-top:50px;" class="section-title">
 
 <h2>💡 Tips</h2>
 
-<ul>
-<li>Choose a clear topic.</li>
-<li>Use only 8–15 hashtags.</li>
-<li>Mix trending + niche hashtags.</li>
-<li>Don't repeat the same hashtags every post.</li>
-</ul>
+<p>
+✔ Enter your niche or topic.<br>
+✔ Use 10–20 relevant hashtags.<br>
+✔ Mix trending and niche hashtags.<br>
+✔ Copy and paste directly into Instagram.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<script>
+<footer>
 
-document.getElementById("hashtagBtn").onclick = function(){
+<div class="container">
 
-const topic = document.getElementById("topic").value;
+<h3>⚡ ReelCreator AI</h3>
 
-document.getElementById("showTopic").innerText =
-topic || "General";
+<p>Made with ❤️ by Aditya</p>
 
-document.getElementById("output").innerHTML =
-"<br><b>✅ Demo Generated Successfully!</b>";
+<p>© 2026 ReelCreator AI. All Rights Reserved.</p>
 
-};
+</div>
 
-</script>
+</footer>
 
-</
+<script src="../script.js"></script>
+
+</body>
+</html>
