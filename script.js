@@ -365,3 +365,35 @@ if (copyFontBtn) {
   });
 
 }
+// ===============================
+// Color Picker
+// ===============================
+
+const colorPicker = document.getElementById("colorPicker");
+const colorPreview = document.getElementById("colorPreview");
+const colorCode = document.getElementById("colorCode");
+const copyColorBtn = document.getElementById("copyColorBtn");
+
+if (colorPicker) {
+
+  colorPicker.addEventListener("input", () => {
+
+    colorPreview.style.background = colorPicker.value;
+
+    colorCode.textContent = colorPicker.value.toUpperCase();
+
+  });
+
+}
+
+if (copyColorBtn) {
+
+  copyColorBtn.addEventListener("click", () => {
+
+    navigator.clipboard.writeText(colorPicker.value.toUpperCase());
+
+    alert("✅ HEX Color Copied!");
+
+  });
+
+}
