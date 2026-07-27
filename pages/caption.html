@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Caption Generator | ReelCreator AI</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🚀 ReelCreator AI
+</div>
+
+<ul class="menu">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="#">Caption AI</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>🤖 AI Caption Generator</h1>
+
+<p>
+Create viral Instagram captions in seconds.
+</p>
+
+</section>
+
+<section class="tools">
+
+<div class="tool-card">
+
+<h2>Create Caption</h2>
+
+<label>Topic</label>
+
+<input
+type="text"
+id="topic"
+placeholder="Example: Rain, Love, Motivation">
+
+<br><br>
+
+<label>Mood</label>
+
+<select id="mood">
+
+<option>Motivational</option>
+
+<option>Sad</option>
+
+<option>Love</option>
+
+<option>Attitude</option>
+
+<option>Funny</option>
+
+<option>Emotional</option>
+
+</select>
+
+<br><br>
+
+<label>Language</label>
+
+<select id="language">
+
+<option>Hindi</option>
+
+<option>English</option>
+
+<option>Hinglish</option>
+
+</select>
+
+<br><br>
+
+<button id="generateBtn">
+
+Generate Caption
+
+</button>
+
+<div id="result">
+
+Your AI caption will appear here...
+
+</div>
+
+</div>
+
+</section>
+
+<script src="../script.js"></script>
+<div class="tips">
+
+<h3>💡 Tips</h3>
+
+<ul>
+
+<li>Write a clear topic.</li>
+
+<li>Select the correct mood.</li>
+
+<li>Choose your preferred language.</li>
+
+<li>Click "Generate Caption".</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer">
+
+<h2>🚀 ReelCreator AI</h2>
+
+<p>Create Better. Grow Faster.</p>
+
+<p>
+
+Made with ❤️ by Aditya Kashyap
+
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+document.getElementById("generateBtn").addEventListener("click",function(){
+
+let topic=document.getElementById("topic").value;
+
+let mood=document.getElementById("mood").value;
+
+let language=document.getElementById("language").value;
+
+let result=document.getElementById("result");
+
+if(topic==""){
+
+result.innerHTML="⚠️ Please enter a topic.";
+
+return;
+
+}
+
+result.innerHTML=
+
+"🚀 Demo Caption<br><br>" +
+
+"Topic: <b>"+topic+"</b><br>" +
+
+"Mood: <b>"+mood+"</b><br>" +
+
+"Language: <b>"+language+"</b><br><br>" +
+
+"✨ This is a demo. Next step we will connect Cloudflare AI so captions are generated automatically.";
+
+});
+
+</script>
+
+</body>
+
+</html>
