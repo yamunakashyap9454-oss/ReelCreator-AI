@@ -844,3 +844,61 @@ if (copyThumbnailBtn) {
   });
 
 }
+// ===============================
+// YouTube Title Generator
+// ===============================
+
+const youtubeBtn = document.getElementById("youtubeBtn");
+
+if (youtubeBtn) {
+
+  youtubeBtn.addEventListener("click", () => {
+
+    const topic = document.getElementById("youtubeTopic").value.trim();
+    const style = document.getElementById("youtubeStyle").value;
+    const output = document.getElementById("youtubeOutput");
+
+    if (!topic) {
+      output.innerHTML = "⚠️ Please enter a video topic.";
+      return;
+    }
+
+    output.innerHTML = `
+      <h3>📝 YouTube Title Ideas</h3>
+
+      <p><strong>Topic:</strong> ${topic}</p>
+      <p><strong>Style:</strong> ${style}</p>
+
+      <br>
+
+      <p>🔥 10 ${topic} Secrets You Must Know!</p>
+      <p>😱 I Tried ${topic} for 30 Days – Here's What Happened!</p>
+      <p>🚀 The Ultimate ${topic} Guide (2026)</p>
+      <p>💯 How to Master ${topic} Like a Pro</p>
+      <p>⚡ Biggest ${topic} Mistakes to Avoid</p>
+
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy YouTube Titles
+// ===============================
+
+const copyYoutubeBtn = document.getElementById("copyYoutubeBtn");
+
+if (copyYoutubeBtn) {
+
+  copyYoutubeBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("youtubeOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ YouTube Titles Copied!");
+
+  });
+
+}
