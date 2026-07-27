@@ -786,3 +786,61 @@ if (copySongBtn) {
   });
 
 }
+// ===============================
+// Thumbnail Title Generator
+// ===============================
+
+const thumbnailBtn = document.getElementById("thumbnailBtn");
+
+if (thumbnailBtn) {
+
+  thumbnailBtn.addEventListener("click", () => {
+
+    const topic = document.getElementById("videoTopic").value.trim();
+    const style = document.getElementById("titleStyle").value;
+    const output = document.getElementById("thumbnailOutput");
+
+    if (!topic) {
+      output.innerHTML = "⚠️ Please enter a video topic.";
+      return;
+    }
+
+    output.innerHTML = `
+      <h3>🖼️ Thumbnail Title Ideas</h3>
+
+      <p><strong>Topic:</strong> ${topic}</p>
+      <p><strong>Style:</strong> ${style}</p>
+
+      <br>
+
+      <p>🔥 The Biggest ${topic} Mistake!</p>
+      <p>😱 Nobody Told You This About ${topic}</p>
+      <p>🚀 ${topic}: 5 Secret Tips</p>
+      <p>⚡ How I Mastered ${topic}</p>
+      <p>💯 The Truth About ${topic}</p>
+
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Thumbnail Titles
+// ===============================
+
+const copyThumbnailBtn = document.getElementById("copyThumbnailBtn");
+
+if (copyThumbnailBtn) {
+
+  copyThumbnailBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("thumbnailOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Thumbnail Titles Copied!");
+
+  });
+
+}
