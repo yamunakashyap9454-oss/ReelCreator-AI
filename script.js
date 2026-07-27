@@ -346,3 +346,22 @@ if (copyBioBtn) {
   });
 
 }
+// ===============================
+// Copy Fonts
+// ===============================
+
+const copyFontBtn = document.getElementById("copyFontBtn");
+
+if (copyFontBtn) {
+
+  copyFontBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("fontOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Fonts Copied!");
+
+  });
+
+}
