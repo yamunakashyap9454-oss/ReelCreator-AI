@@ -1,36 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Username Generator | ReelCreator AI</title>
 
 <link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
+<header>
+
+<div class="container">
+
 <nav class="navbar">
-<div class="logo">🚀 ReelCreator AI</div>
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-user"></i>
+
+<span>ReelCreator AI</span>
+
+</a>
 
 <ul class="menu">
+
 <li><a href="../index.html">Home</a></li>
-<li><a href="#">Username AI</a></li>
+
+<li><a href="../index.html#tools">Tools</a></li>
+
 </ul>
+
+<button class="theme-btn">🌙</button>
+
 </nav>
 
+</div>
+
+</header>
+
 <section class="hero">
-<h1>✨ AI Username Generator</h1>
-<p>Create stylish Instagram usernames instantly.</p>
+
+<div class="container">
+
+<div class="hero-content">
+
+<span class="hero-tag">
+👤 AI Username Generator
+</span>
+
+<h1>Create Unique Usernames</h1>
+
+<p>
+Generate stylish and unique usernames for Instagram, YouTube, Gaming and more.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="tools">
 
+<div class="container">
+
 <div class="tool-card">
 
-<h2>Create Username</h2>
-
-<label>Your Name</label>
+<h2 style="margin-bottom:25px;">
+✨ Generate Username
+</h2>
+<label for="name">Enter Your Name</label>
 
 <input
 type="text"
@@ -39,36 +92,78 @@ placeholder="Example: Aditya">
 
 <br><br>
 
-<label>Style</label>
+<label for="category">Category</label>
 
-<select id="style">
-<option>Professional</option>
-<option>Cool</option>
+<select id="category">
+
+<option>Instagram</option>
 <option>Gaming</option>
-<option>Creator</option>
-<option>VIP</option>
+<option>YouTube</option>
+<option>Business</option>
+<option>Personal</option>
+
 </select>
 
 <br><br>
-<button id="usernameBtn">
-Generate Username
+
+<div class="hero-buttons">
+
+<button
+id="usernameBtn"
+class="btn btn-primary">
+
+✨ Generate Usernames
+
 </button>
 
-<div id="output">
+<button
+id="copyUsernameBtn"
+class="btn btn-secondary">
 
-<h3>✨ Demo Usernames</h3>
+📋 Copy Usernames
 
-<p>@its_creator</p>
-<p>@official_creator</p>
-<p>@real_creator</p>
-<p>@creator_007</p>
-<p>@the_creator</p>
+</button>
+
+</div>
+
+<br>
+
+<div id="output" class="result-box">
+
+✨ Your unique usernames will appear here...
+
+</div>
+
+<div style="margin-top:50px;" class="section-title">
+
+<h2>💡 Tips</h2>
+
+<p>
+✔ Use short and unique names.<br>
+✔ Avoid too many numbers.<br>
+✔ Choose a username that matches your niche.<br>
+✔ Keep it easy to remember.
+</p>
 
 </div>
 
 </div>
 
 </section>
+
+<footer>
+
+<div class="container">
+
+<h3>⚡ ReelCreator AI</h3>
+
+<p>Made with ❤️ by Aditya</p>
+
+<p>© 2026 ReelCreator AI. All Rights Reserved.</p>
+
+</div>
+
+</footer>
 
 <script src="../script.js"></script>
 
