@@ -145,3 +145,45 @@ if (copyCaptionBtn) {
   });
 
 }
+const fontBtn = document.getElementById("fontBtn");
+
+if (fontBtn) {
+
+fontBtn.addEventListener("click", () => {
+
+const text = document.getElementById("fontInput").value.trim();
+
+const output = document.getElementById("fontOutput");
+
+if (!text) {
+output.innerHTML = "⚠️ Please enter text.";
+return;
+}
+
+output.innerHTML = `
+<h3>🔤 Stylish Fonts</h3>
+
+<p>𝐁𝐨𝐥𝐝 → ${text}</p>
+
+<p>𝑰𝒕𝒂𝒍𝒊𝒄 → ${text}</p>
+
+<p>𝕯𝖆𝖗𝖐 → ${text}</p>
+
+<p>🅑🅤🅑🅑🅛🅔 → ${text}</p>
+
+<p>Ｓｔｙｌｉｓｈ → ${text}</p>
+
+<p>ⓒⓘⓡⓒⓛⓔ → ${text}</p>
+
+<p>★彡 ${text} 彡★</p>
+
+<p>꧁ ${text} ꧂</p>
+
+<p>『 ${text} 』</p>
+
+<p>✦ ${text} ✦</p>
+`;
+
+});
+
+}
