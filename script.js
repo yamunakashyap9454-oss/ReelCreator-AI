@@ -431,3 +431,71 @@ if (bestTimeBtn) {
   });
 
 }
+// ===============================
+// Reel Script Generator
+// ===============================
+
+const scriptBtn = document.getElementById("scriptBtn");
+
+if (scriptBtn) {
+
+  scriptBtn.addEventListener("click", () => {
+
+    const topic = document.getElementById("scriptTopic").value.trim();
+    const mood = document.getElementById("scriptMood").value;
+    const duration = document.getElementById("scriptDuration").value;
+    const output = document.getElementById("scriptOutput");
+
+    if (!topic) {
+      output.innerHTML = "⚠️ Please enter a reel topic.";
+      return;
+    }
+
+    output.innerHTML = `
+      <h3>🎬 AI Reel Script</h3>
+
+      <p><strong>📌 Topic:</strong> ${topic}</p>
+      <p><strong>😊 Mood:</strong> ${mood}</p>
+      <p><strong>⏱ Duration:</strong> ${duration}</p>
+
+      <br>
+
+      <p><strong>🎯 Hook:</strong><br>
+      "Stop scrolling! This can change your mindset."</p>
+
+      <br>
+
+      <p><strong>📖 Script:</strong><br>
+      Today we'll talk about <b>${topic}</b>.<br>
+      Stay consistent, keep improving every day, and never give up.<br>
+      Small daily actions create big results.</p>
+
+      <br>
+
+      <p><strong>🚀 Ending:</strong><br>
+      Follow for more amazing content ❤️</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Reel Script
+// ===============================
+
+const copyScriptBtn = document.getElementById("copyScriptBtn");
+
+if (copyScriptBtn) {
+
+  copyScriptBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("scriptOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Reel Script Copied!");
+
+  });
+
+}
