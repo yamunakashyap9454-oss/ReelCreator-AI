@@ -159,6 +159,9 @@ if (bioBtn) {
 // ===============================
 // Stylish Fonts Generator
 // ===============================
+// ===============================
+// Stylish Fonts Generator
+// ===============================
 
 const fontBtn = document.getElementById("fontBtn");
 
@@ -183,7 +186,15 @@ if (fontBtn) {
       <p>𝓢𝓬𝓻𝓲𝓹𝓽 ➜ ${text}</p>
       <p>ⓒⓘⓡⓒⓛⓔ ➜ ${text}</p>
       <p>Ｓｔｙｌｉｓｈ ➜ ${text}</p>
-      // ======================================
+      <p>★彡 ${text} 彡★</p>
+      <p>꧁ ${text} ꧂</p>
+      <p>『 ${text} 』</p>
+      <p>✦ ${text} ✦</p>
+    `;
+
+  });
+
+}
 // Part 3
 // Hashtag + Best Time + Color Picker
 // ======================================
