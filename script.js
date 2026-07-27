@@ -551,3 +551,60 @@ if (copyIdeaBtn) {
   });
 
 }
+// ===============================
+// Viral Hooks Generator
+// ===============================
+
+const hookBtn = document.getElementById("hookBtn");
+
+if (hookBtn) {
+
+  hookBtn.addEventListener("click", () => {
+
+    const topic = document.getElementById("hookTopic").value.trim();
+    const style = document.getElementById("hookStyle").value;
+    const output = document.getElementById("hookOutput");
+
+    if (!topic) {
+      output.innerHTML = "⚠️ Please enter a topic.";
+      return;
+    }
+
+    output.innerHTML = `
+      <h3>🔥 Viral Hooks</h3>
+
+      <p><strong>Topic:</strong> ${topic}</p>
+      <p><strong>Style:</strong> ${style}</p>
+
+      <br>
+
+      <p>🔥 Stop scrolling! You need to know this about ${topic}.</p>
+      <p>😲 Nobody talks about this ${topic} secret...</p>
+      <p>🚀 This one trick can change your ${topic} journey!</p>
+      <p>💯 If you're serious about ${topic}, watch this till the end.</p>
+      <p>⚡ I wish someone had told me this earlier about ${topic}.</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Viral Hooks
+// ===============================
+
+const copyHookBtn = document.getElementById("copyHookBtn");
+
+if (copyHookBtn) {
+
+  copyHookBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("hookOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Viral Hooks Copied!");
+
+  });
+
+}
