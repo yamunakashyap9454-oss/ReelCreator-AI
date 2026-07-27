@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Color Picker | ReelCreator AI</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav class="navbar">
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-palette"></i>
+
+<span>ReelCreator AI</span>
+
+</a>
+
+<ul class="menu">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../index.html#tools">Tools</a></li>
+
+</ul>
+
+<button class="theme-btn">🌙</button>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<span class="hero-tag">
+🎨 AI Color Picker
+</span>
+
+<h1>Pick Beautiful Colors</h1>
+
+<p>
+Choose beautiful colors and instantly copy HEX color codes for your designs.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="tools">
+
+<div class="container">
+
+<div class="tool-card">
+
+<h2 style="margin-bottom:25px;">
+🎨 Select Color
+</h2>
+<label for="colorPicker">Choose Your Color</label>
+
+<br><br>
+
+<input
+type="color"
+id="colorPicker"
+value="#8b5cf6"
+style="width:120px;height:70px;border:none;border-radius:12px;cursor:pointer;">
+
+<br><br>
+
+<div id="colorPreview"
+style="
+width:180px;
+height:180px;
+margin:auto;
+border-radius:20px;
+background:#8b5cf6;
+border:3px solid rgba(255,255,255,.15);
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+">
+</div>
+
+<br>
+
+<h3 id="colorCode">#8B5CF6</h3>
+
+<br>
+
+<div class="hero-buttons">
+
+<button
+id="copyColorBtn"
+class="btn btn-primary">
+
+📋 Copy HEX Code
+
+</button>
+
+</div>
