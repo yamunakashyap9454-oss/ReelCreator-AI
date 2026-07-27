@@ -730,3 +730,59 @@ if (copyPlannerBtn) {
   });
 
 }
+// ===============================
+// Trending Songs Finder
+// ===============================
+
+const songBtn = document.getElementById("songBtn");
+
+if (songBtn) {
+
+  songBtn.addEventListener("click", () => {
+
+    const platform = document.getElementById("songPlatform").value;
+    const category = document.getElementById("songCategory").value;
+    const output = document.getElementById("songOutput");
+
+    output.innerHTML = `
+      <h3>🎵 Trending Songs</h3>
+
+      <p><strong>Platform:</strong> ${platform}</p>
+      <p><strong>Category:</strong> ${category}</p>
+
+      <br>
+
+      <p>🎶 Golden Hour</p>
+      <p>🎶 Heat Waves</p>
+      <p>🎶 Until I Found You</p>
+      <p>🎶 Perfect</p>
+      <p>🎶 Night Changes</p>
+
+      <br>
+
+      <p><strong>💡 Tip:</strong> Check Instagram's Trending Audio section regularly for the latest viral sounds.</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Song List
+// ===============================
+
+const copySongBtn = document.getElementById("copySongBtn");
+
+if (copySongBtn) {
+
+  copySongBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("songOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Song List Copied!");
+
+  });
+
+}
