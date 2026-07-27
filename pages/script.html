@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Script Generator | ReelCreator AI</title>
+
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+🚀 ReelCreator AI
+</div>
+
+<ul class="menu">
+<li><a href="../index.html">Home</a></li>
+<li><a href="#">Script AI</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>🎬 AI Script Generator</h1>
+
+<p>
+Generate short viral Reel scripts in seconds.
+</p>
+
+</section>
+
+<section>
+
+<div class="tool-card">
+
+<h2>Create Script</h2>
+
+<input
+type="text"
+id="topic"
+placeholder="Example: Village Life">
+
+<br><br>
+
+<select id="category">
+
+<option>Motivation</option>
+
+<option>Love</option>
+
+<option>Sad</option>
+
+<option>Comedy</option>
+
+<option>Story</option>
+
+</select>
+
+<br><br>
+
+<button id="scriptBtn">
+
+Generate Script
+
+</button>
+
+<div id="output">
+
+Your script will appear here...
+
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<div class="footer">
+
+<h2>🚀 ReelCreator AI</h2>
+
+<p>Create Better. Grow Faster.</p>
+
+</div>
+
+</footer>
+
+<script>
+
+document.getElementById("scriptBtn").addEventListener("click",function(){
+
+let topic=document.getElementById("topic").value;
+let category=document.getElementById("category").value;
+
+let output=document.getElementById("output");
+
+if(topic==""){
+
+output.innerHTML="⚠️ Please enter a topic.";
+return;
+
+}
+
+output.innerHTML=`
+
+<h3>🎣 Hook</h3>
+
+<p>Stop scrolling! Here's something about <b>${topic}</b>.</p>
+
+<h3>🎬 Script</h3>
+
+<p>
+Create a short ${category.toLowerCase()} reel around <b>${topic}</b>.
+Keep it simple, emotional and engaging.
+</p>
+
+<h3>📢 CTA</h3>
+
+<p>
+Follow for more amazing content! 🚀
+</p>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>
