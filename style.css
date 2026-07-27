@@ -599,3 +599,31 @@ footer p{
         font-size:36px;
     }
 }
+/* ===========================
+   Live Search
+=========================== */
+
+.search-box{
+margin:30px auto;
+max-width:650px;
+}
+
+.search-box input{
+width:100%;
+padding:16px 20px;
+border:none;
+outline:none;
+border-radius:15px;
+font-size:17px;
+background:#1f2937;
+color:#fff;
+transition:.3s;
+}
+
+.search-box input:focus{
+box-shadow:0 0 15px rgba(99,102,241,.5);
+}
+
+.search-box input::placeholder{
+color:#bdbdbd;
+}
