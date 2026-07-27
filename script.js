@@ -1078,3 +1078,77 @@ if (copyEmojiBtn) {
   });
 
 }
+// ===============================
+// Caption Translator
+// ===============================
+
+const translateBtn = document.getElementById("translateBtn");
+
+if (translateBtn) {
+
+  translateBtn.addEventListener("click", () => {
+
+    const input = document.getElementById("captionInput").value.trim();
+    const direction = document.getElementById("translateDirection").value;
+    const output = document.getElementById("translationOutput");
+
+    if (!input) {
+      output.innerHTML = "⚠️ Please enter a caption.";
+      return;
+    }
+
+    let translated = "";
+
+    if (direction === "Hindi → English") {
+
+      translated =
+`[Demo Translation]
+
+"${input}"
+
+This is a translated English version of your caption.
+(Real AI Translation will be available after AI integration.)`;
+
+    } else {
+
+      translated =
+`[डेमो अनुवाद]
+
+"${input}"
+
+यह आपके कैप्शन का हिंदी संस्करण है।
+(रीयल AI Translation बाद में जोड़ा जाएगा।)`;
+
+    }
+
+    output.innerHTML = `
+      <h3>🌍 Translation Result</h3>
+
+      <pre style="white-space:pre-wrap;font-family:inherit;">
+${translated}
+      </pre>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Translation
+// ===============================
+
+const copyTranslateBtn = document.getElementById("copyTranslateBtn");
+
+if (copyTranslateBtn) {
+
+  copyTranslateBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("translationOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Translation Copied!");
+
+  });
+
+}
