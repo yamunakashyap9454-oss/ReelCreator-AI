@@ -1152,3 +1152,84 @@ if (copyTranslateBtn) {
   });
 
 }
+// ===============================
+// Viral Score Checker
+// ===============================
+
+const viralBtn = document.getElementById("viralBtn");
+
+if (viralBtn) {
+
+  viralBtn.addEventListener("click", () => {
+
+    const hook = document.getElementById("viralHook").value.trim();
+    const caption = document.getElementById("viralCaption").value.trim();
+    const hashtags = document.getElementById("viralHashtags").value.trim();
+    const output = document.getElementById("viralOutput");
+
+    if (!hook || !caption || !hashtags) {
+      output.innerHTML = "⚠️ Please fill all fields.";
+      return;
+    }
+
+    let score = 50;
+
+    if (hook.length > 20) score += 15;
+    if (caption.length > 50) score += 15;
+
+    const hashtagCount = hashtags.split("#").filter(tag => tag.trim() !== "").length;
+
+    if (hashtagCount >= 5) score += 20;
+
+    if (score > 100) score = 100;
+
+    const hookRating = Math.min(10, Math.floor(hook.length / 8));
+    const captionRating = Math.min(10, Math.floor(caption.length / 15));
+    const hashtagRating = Math.min(10, hashtagCount);
+
+    let suggestion = "🔥 Great! Your content looks strong.";
+
+    if (score < 70) {
+      suggestion = "💡 Improve your hook and use more relevant hashtags.";
+    } else if (score < 90) {
+      suggestion = "🚀 Good! A stronger CTA can improve performance.";
+    }
+
+    output.innerHTML = `
+      <h3>📈 Viral Report</h3>
+
+      <h2>${score}/100</h2>
+
+      <p>🎣 Hook Rating: ${hookRating}/10</p>
+      <p>📝 Caption Rating: ${captionRating}/10</p>
+      <p>🏷️ Hashtag Rating: ${hashtagRating}/10</p>
+
+      <br>
+
+      <p><strong>Suggestion:</strong></p>
+      <p>${suggestion}</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Viral Report
+// ===============================
+
+const copyViralBtn = document.getElementById("copyViralBtn");
+
+if (copyViralBtn) {
+
+  copyViralBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("viralOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Viral Report Copied!");
+
+  });
+
+}
