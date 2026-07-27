@@ -499,3 +499,55 @@ if (copyScriptBtn) {
   });
 
 }
+// ===============================
+// Viral Reel Ideas Generator
+// ===============================
+
+const ideaBtn = document.getElementById("ideaBtn");
+
+if (ideaBtn) {
+
+  ideaBtn.addEventListener("click", () => {
+
+    const category = document.getElementById("ideaCategory").value;
+    const mood = document.getElementById("ideaMood").value;
+    const output = document.getElementById("ideaOutput");
+
+    output.innerHTML = `
+      <h3>💡 Viral Reel Ideas</h3>
+
+      <p><strong>Category:</strong> ${category}</p>
+      <p><strong>Mood:</strong> ${mood}</p>
+
+      <br>
+
+      <p>1️⃣ 5 mistakes people make in ${category}</p>
+      <p>2️⃣ Before vs After in ${category}</p>
+      <p>3️⃣ Things nobody tells you about ${category}</p>
+      <p>4️⃣ My biggest lesson in ${category}</p>
+      <p>5️⃣ Try this ${category} challenge today!</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Viral Ideas
+// ===============================
+
+const copyIdeaBtn = document.getElementById("copyIdeaBtn");
+
+if (copyIdeaBtn) {
+
+  copyIdeaBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("ideaOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Viral Ideas Copied!");
+
+  });
+
+}
