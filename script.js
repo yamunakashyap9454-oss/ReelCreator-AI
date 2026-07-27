@@ -59,3 +59,23 @@ color:#475569;
 body.light-mode a{
 color:#111827;
 }
+
+const bioBtn = document.getElementById("bioBtn");
+
+if (bioBtn) {
+  bioBtn.addEventListener("click", () => {
+    const category = document.getElementById("category").value;
+    const language = document.getElementById("language").value;
+    const output = document.getElementById("output");
+
+    output.innerHTML = `
+    <h3>✨ Demo Bio</h3>
+    <p><b>Category:</b> ${category}</p>
+    <p><b>Language:</b> ${language}</p>
+    <br>
+    <p>🚀 Dream Big | Create Daily</p>
+    <p>❤️ Believe in Yourself</p>
+    <p>📩 DM for Collaboration</p>
+    `;
+  });
+}
