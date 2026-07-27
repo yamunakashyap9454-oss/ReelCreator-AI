@@ -674,3 +674,59 @@ if (copyReplyBtn) {
   });
 
 }
+// ===============================
+// Content Planner
+// ===============================
+
+const plannerBtn = document.getElementById("plannerBtn");
+
+if (plannerBtn) {
+
+  plannerBtn.addEventListener("click", () => {
+
+    const type = document.getElementById("contentType").value;
+    const niche = document.getElementById("contentNiche").value;
+    const days = document.getElementById("postingDays").value;
+    const output = document.getElementById("plannerOutput");
+
+    output.innerHTML = `
+      <h3>📅 Weekly Content Plan</h3>
+
+      <p><strong>Platform:</strong> ${type}</p>
+      <p><strong>Niche:</strong> ${niche}</p>
+      <p><strong>Posting:</strong> ${days}</p>
+
+      <br>
+
+      <p>📌 Monday - Educational Reel</p>
+      <p>📌 Tuesday - Trending Topic</p>
+      <p>📌 Wednesday - Behind The Scenes</p>
+      <p>📌 Thursday - Tips & Tricks</p>
+      <p>📌 Friday - Viral Challenge</p>
+      <p>📌 Saturday - Q&A / Story</p>
+      <p>📌 Sunday - Weekly Recap</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Planner
+// ===============================
+
+const copyPlannerBtn = document.getElementById("copyPlannerBtn");
+
+if (copyPlannerBtn) {
+
+  copyPlannerBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("plannerOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Content Plan Copied!");
+
+  });
+
+}
