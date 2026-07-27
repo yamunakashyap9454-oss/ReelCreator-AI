@@ -1,3 +1,6 @@
+window.onerror = function(message, source, line){
+    alert("Error: " + message + "\nLine: " + line);
+};
 // ===============================
 // ReelCreator AI - script.js
 // Part 1
