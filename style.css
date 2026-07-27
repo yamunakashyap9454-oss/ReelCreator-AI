@@ -237,3 +237,14 @@ font-size:30px;
 }
 
 }
+.result-box{
+margin-top:20px;
+padding:15px;
+background:#151b2e;
+border:1px solid #7c4dff;
+border-radius:12px;
+color:#fff;
+line-height:2;
+word-break:break-word;
+font-size:18px;
+}
