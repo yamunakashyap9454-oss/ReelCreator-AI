@@ -902,3 +902,104 @@ if (copyYoutubeBtn) {
   });
 
 }
+// ===============================
+// CTA Generator
+// ===============================
+
+const ctaBtn = document.getElementById("ctaBtn");
+
+if (ctaBtn) {
+
+  ctaBtn.addEventListener("click", () => {
+
+    const platform = document.getElementById("ctaPlatform").value;
+    const goal = document.getElementById("ctaGoal").value;
+    const output = document.getElementById("ctaOutput");
+
+    let ctas = [];
+
+    switch (goal) {
+
+      case "Get More Followers":
+        ctas = [
+          "🔥 Follow for more amazing content!",
+          "❤️ Follow now and don't miss the next post!",
+          "🚀 Join our community by following!"
+        ];
+        break;
+
+      case "Increase Likes":
+        ctas = [
+          "👍 Like this post if it helped you!",
+          "❤️ Double tap if you agree!",
+          "🔥 Hit the Like button now!"
+        ];
+        break;
+
+      case "Get More Comments":
+        ctas = [
+          "💬 Share your opinion in the comments!",
+          "👇 Comment your favorite tip!",
+          "🤔 What do you think? Tell me below!"
+        ];
+        break;
+
+      case "Increase Shares":
+        ctas = [
+          "📤 Share this with your friends!",
+          "🚀 Send this to someone who needs it!",
+          "❤️ Share if you found this useful!"
+        ];
+        break;
+
+      case "Subscribe Channel":
+        ctas = [
+          "🔔 Subscribe for more amazing videos!",
+          "🎥 Don't forget to subscribe!",
+          "🚀 Join our YouTube family!"
+        ];
+        break;
+
+      case "Save Post":
+        ctas = [
+          "💾 Save this post for later!",
+          "📌 Bookmark this so you don't forget!",
+          "⭐ Save this reel now!"
+        ];
+        break;
+    }
+
+    output.innerHTML = `
+      <h3>📢 CTA Suggestions</h3>
+
+      <p><strong>Platform:</strong> ${platform}</p>
+      <p><strong>Goal:</strong> ${goal}</p>
+
+      <br>
+
+      ${ctas.map(item => `<p>${item}</p>`).join("")}
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy CTA
+// ===============================
+
+const copyCtaBtn = document.getElementById("copyCtaBtn");
+
+if (copyCtaBtn) {
+
+  copyCtaBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("ctaOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ CTA Copied!");
+
+  });
+
+}
