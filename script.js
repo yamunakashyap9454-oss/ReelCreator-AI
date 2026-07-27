@@ -96,4 +96,52 @@ if (usernameBtn) {
     `;
   });
 }
+const generateBtn = document.getElementById("generateBtn");
 
+if (generateBtn) {
+
+  generateBtn.addEventListener("click", () => {
+
+    const topic = document.getElementById("topic").value.trim();
+    const mood = document.getElementById("mood").value;
+    const language = document.getElementById("language").value;
+    const result = document.getElementById("result");
+
+    if (!topic) {
+      result.innerHTML = "⚠️ Please enter a topic.";
+      return;
+    }
+
+    result.innerHTML = `
+      <h3>✨ AI Caption</h3>
+      <p><b>Topic:</b> ${topic}</p>
+      <p><b>Mood:</b> ${mood}</p>
+      <p><b>Language:</b> ${language}</p>
+
+      <br>
+
+      <p>
+      🌟 Every journey begins with one step.
+      Keep creating, keep believing and never stop chasing your dreams. 🚀✨
+      </p>
+    `;
+
+  });
+
+}
+
+const copyCaptionBtn = document.getElementById("copyCaptionBtn");
+
+if (copyCaptionBtn) {
+
+  copyCaptionBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("result").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Caption copied!");
+
+  });
+
+}
