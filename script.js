@@ -1288,56 +1288,35 @@ if (engagementBtn) {
   });
 
 }
-
-// ===============================
-// Copy Engagement Result
-// ===============================
-
-const copyEngagementBtn = document.getElementById("copyEngagementBtn");
-
-if (copyEngagementBtn) {
-
-  copyEngagementBtn.addEventListener("click", () => {
-
-    const text = document.getElementById("engagementOutput").innerText;
-
-    navigator.clipboard.writeText(text);
-
-    alert("✅ Engagement Report Copied!");
-
-  });
-
-}
 // ===============================
 // Live Tool Search
 // ===============================
 
-const toolSearch = document.getElementById("toolSearch");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (toolSearch) {
+  const toolSearch = document.getElementById("toolSearch");
 
-toolSearch.addEventListener("keyup", function () {
+  if (!toolSearch) return;
 
-const value = this.value.toLowerCase();
+  toolSearch.addEventListener("input", function () {
 
-const cards = document.querySelectorAll(".tool-card");
+    const search = this.value.toLowerCase().trim();
 
-cards.forEach(card => {
+    const cards = document.querySelectorAll(".tools-grid .tool-card");
 
-const text = card.innerText.toLowerCase();
+    cards.forEach(function(card) {
 
-if (text.includes(value)) {
+      const text = card.textContent.toLowerCase();
 
-card.style.display = "block";
+      if (text.indexOf(search) > -1) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
 
-} else {
+    });
 
-card.style.display = "none";
-
-}
+  });
 
 });
 
-});
-
-}
