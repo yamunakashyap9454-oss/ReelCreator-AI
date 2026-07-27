@@ -608,3 +608,69 @@ if (copyHookBtn) {
   });
 
 }
+// ===============================
+// Comment Reply AI
+// ===============================
+
+const replyBtn = document.getElementById("replyBtn");
+
+if (replyBtn) {
+
+  replyBtn.addEventListener("click", () => {
+
+    const comment = document.getElementById("commentInput").value.trim();
+    const tone = document.getElementById("replyTone").value;
+    const output = document.getElementById("replyOutput");
+
+    if (!comment) {
+      output.innerHTML = "⚠️ Please enter a comment.";
+      return;
+    }
+
+    let reply = "";
+
+    if (tone.includes("Friendly")) {
+      reply = "😊 Thank you so much! I'm really glad you liked it. ❤️";
+    } else if (tone.includes("Professional")) {
+      reply = "Thank you for your valuable feedback. Your support means a lot!";
+    } else if (tone.includes("Funny")) {
+      reply = "😂 Haha! You just made my day. Thanks a lot!";
+    } else if (tone.includes("Thank You")) {
+      reply = "❤️ Thank you for your love and support. It truly means a lot!";
+    } else {
+      reply = "🚀 Thank you! Keep supporting and keep growing with us!";
+    }
+
+    output.innerHTML = `
+      <h3>💬 AI Reply</h3>
+
+      <p><strong>Comment:</strong> ${comment}</p>
+
+      <br>
+
+      <p>${reply}</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Reply
+// ===============================
+
+const copyReplyBtn = document.getElementById("copyReplyBtn");
+
+if (copyReplyBtn) {
+
+  copyReplyBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("replyOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Reply Copied!");
+
+  });
+
+}
