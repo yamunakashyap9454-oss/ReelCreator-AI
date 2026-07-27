@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Hashtag Generator | ReelCreator AI</title>
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+#️⃣ ReelCreator AI
+</div>
+
+<ul class="menu">
+<li><a href="../index.html">Home</a></li>
+<li><a href="#">Hashtag AI</a></li>
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>#️⃣ AI Hashtag Generator</h1>
+
+<p>Generate trending hashtags in seconds.</p>
+
+</section>
+
+<section class="tools">
+
+<div class="tool-card">
+
+<h2>Create Hashtags</h2>
+
+<label>Topic</label>
+
+<input
+type="text"
+id="topic"
+placeholder="Example: Love, Rain, Fitness">
+
+<br><br>
+
+<label>Platform</label>
+
+<select id="platform">
+<option>Instagram</option>
+<option>YouTube</option>
+<option>Facebook</option>
+<option>Threads</option>
+</select>
+
+<br><br>
+
+<button id="hashtagBtn">
+Generate Hashtags
+</button>
+
+<div id="output"></div>
+
+</div>
+
+</section>
+<div class="tool-card">
+
+<h2>🚀 Demo Hashtags</h2>
+
+<div id="demoResult">
+
+<p><b>Topic:</b> <span id="showTopic">-</span></p>
+
+<p style="margin-top:15px;">
+#reels #instagram #viral #trending #explore
+#fyp #love #creator #reelkarofeelkaro #india
+</p>
+
+</div>
+
+</div>
+
+<section class="tips">
+
+<h2>💡 Tips</h2>
+
+<ul>
+<li>Choose a clear topic.</li>
+<li>Use only 8–15 hashtags.</li>
+<li>Mix trending + niche hashtags.</li>
+<li>Don't repeat the same hashtags every post.</li>
+</ul>
+
+</section>
+
+<script>
+
+document.getElementById("hashtagBtn").onclick = function(){
+
+const topic = document.getElementById("topic").value;
+
+document.getElementById("showTopic").innerText =
+topic || "General";
+
+document.getElementById("output").innerHTML =
+"<br><b>✅ Demo Generated Successfully!</b>";
+
+};
+
+</script>
+
+</
