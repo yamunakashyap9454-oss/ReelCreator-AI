@@ -289,3 +289,22 @@ if (colorPicker) {
 }
 
 console.log("✅ ReelCreator AI Loaded Successfully");
+// ===============================
+// Copy Hashtags
+// ===============================
+
+const copyHashtagBtn = document.getElementById("copyHashtagBtn");
+
+if (copyHashtagBtn) {
+
+  copyHashtagBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("hashtagOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Hashtags Copied!");
+
+  });
+
+}
