@@ -397,3 +397,37 @@ if (copyColorBtn) {
   });
 
 }
+// ===============================
+// Best Time Generator
+// ===============================
+
+const bestTimeBtn = document.getElementById("bestTimeBtn");
+
+if (bestTimeBtn) {
+
+  bestTimeBtn.addEventListener("click", () => {
+
+    const platform = document.getElementById("platform").value;
+    const day = document.getElementById("day").value;
+    const output = document.getElementById("bestTimeOutput");
+
+    output.innerHTML = `
+      <h3>📅 Recommended Time</h3>
+
+      <p><strong>Platform:</strong> ${platform}</p>
+      <p><strong>Day:</strong> ${day}</p>
+
+      <br>
+
+      <p>🌅 Morning: 8:00 AM – 10:00 AM</p>
+      <p>🌞 Afternoon: 12:00 PM – 2:00 PM</p>
+      <p>🌙 Evening: 6:00 PM – 9:00 PM</p>
+
+      <br>
+
+      <h3>⭐ Best Time: 7:30 PM</h3>
+    `;
+
+  });
+
+}
