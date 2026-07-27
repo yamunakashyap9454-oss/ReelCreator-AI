@@ -1,10 +1,7 @@
-window.onerror = function(message, source, line){
-    alert("Error: " + message + "\nLine: " + line);
-};
-// ===============================
-// ReelCreator AI - script.js
-// Part 1
-// ===============================
+// ======================================
+// ReelCreator AI - script.js (Part 1)
+// Theme + Caption Generator
+// ======================================
 
 // Theme Toggle
 const themeBtn = document.querySelector(".theme-btn");
@@ -12,30 +9,8 @@ const themeBtn = document.querySelector(".theme-btn");
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
-
     themeBtn.textContent =
       document.body.classList.contains("light-mode") ? "☀️" : "🌙";
-  });
-}
-
-// Scroll Animation
-const cards = document.querySelectorAll(".tool-card, .feature");
-
-if (cards.length > 0) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  });
-
-  cards.forEach((card) => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(40px)";
-    card.style.transition = "0.6s ease";
-    observer.observe(card);
   });
 }
 
@@ -46,6 +21,7 @@ if (cards.length > 0) {
 const generateBtn = document.getElementById("generateBtn");
 
 if (generateBtn) {
+
   generateBtn.addEventListener("click", () => {
 
     const topic = document.getElementById("topic").value.trim();
@@ -61,27 +37,47 @@ if (generateBtn) {
     let caption = "";
 
     if (language === "Hindi") {
-      caption =
-        "✨ सपनों का पीछा करो, क्योंकि मेहनत कभी बेकार नहीं जाती। ❤️🚀";
+
+      caption = `✨ ${topic} पर हर दिन एक नई कहानी लिखो।
+❤️ कभी हार मत मानो।
+🚀 सपने पूरे होंगे।`;
+
+    } else if (language === "Hinglish") {
+
+      caption = `✨ ${topic} ke saath apni journey continue rakho.
+❤️ Never Give Up.
+🚀 Keep Growing.`;
+
     } else {
-      caption =
-        "✨ Chase your dreams. Hard work always pays off. ❤️🚀";
+
+      caption = `✨ Believe in yourself.
+❤️ Keep creating content about ${topic}.
+🚀 Success will come.`;
+
     }
 
     result.innerHTML = `
       <h3>✨ AI Caption</h3>
+
       <p><b>Topic:</b> ${topic}</p>
+
       <p><b>Mood:</b> ${mood}</p>
+
       <br>
+
       <p>${caption}</p>
     `;
+
   });
+
 }
 
 // Copy Caption
+
 const copyCaptionBtn = document.getElementById("copyCaptionBtn");
 
 if (copyCaptionBtn) {
+
   copyCaptionBtn.addEventListener("click", () => {
 
     const text = document.getElementById("result").innerText;
@@ -91,16 +87,20 @@ if (copyCaptionBtn) {
     alert("✅ Caption Copied!");
 
   });
+
 }
-// ===============================
+
+console.log("✅ Part 1 Loaded");
+// ======================================
 // Part 2
-// Username + Bio + Font Generator
-// ===============================
+// Username + Bio + Stylish Fonts
+// ======================================
 
 // Username Generator
 const usernameBtn = document.getElementById("usernameBtn");
 
 if (usernameBtn) {
+
   usernameBtn.addEventListener("click", () => {
 
     const name = document.getElementById("name").value.trim();
@@ -113,22 +113,29 @@ if (usernameBtn) {
 
     output.innerHTML = `
       <h3>✨ Username Ideas</h3>
+
       <p>@${name}_official</p>
       <p>@its_${name}</p>
       <p>@real_${name}</p>
       <p>@${name}_creator</p>
-      <p>@${name}_007</p>
       <p>@the_${name}</p>
+      <p>@${name}_007</p>
       <p>@${name}_yt</p>
-      <p>@${name}_ff</p>
+      <p>@official_${name}</p>
     `;
+
   });
+
 }
 
+// ===============================
 // Bio Generator
+// ===============================
+
 const bioBtn = document.getElementById("bioBtn");
 
 if (bioBtn) {
+
   bioBtn.addEventListener("click", () => {
 
     const category = document.getElementById("category").value;
@@ -137,17 +144,20 @@ if (bioBtn) {
 
     output.innerHTML = `
       <h3>✨ Instagram Bio</h3>
+
       <p>🔥 ${category}</p>
       <p>❤️ Dream Big</p>
       <p>🚀 Create Daily</p>
       <p>📩 DM For Collaboration</p>
       <p>🌍 ${language}</p>
     `;
+
   });
+
 }
 
 // ===============================
-// Stylish Font Generator
+// Stylish Fonts Generator
 // ===============================
 
 const fontBtn = document.getElementById("fontBtn");
@@ -171,20 +181,12 @@ if (fontBtn) {
       <p>𝑰𝒕𝒂𝒍𝒊𝒄 ➜ ${text}</p>
       <p>𝕭𝖑𝖆𝖈𝖐 ➜ ${text}</p>
       <p>𝓢𝓬𝓻𝓲𝓹𝓽 ➜ ${text}</p>
-      <p>𝒞𝓊𝓇𝓈𝒾𝓋𝑒 ➜ ${text}</p>
-      <p>🅑🅤🅑🅑🅛🅔 ➜ ${text}</p>
       <p>ⓒⓘⓡⓒⓛⓔ ➜ ${text}</p>
       <p>Ｓｔｙｌｉｓｈ ➜ ${text}</p>
-      <p>★彡 ${text} 彡★</p>
-      <p>꧁ ${text} ꧂</p>
-      <p>『 ${text} 』</p>
-      <p>✦ ${text} ✦</p>
-      <p>➳ ${text} ♡</p>
-      <p>✿ ${text} ✿</
-      // ===============================
+      // ======================================
 // Part 3
-// Hashtag + Best Time + Color
-// ===============================
+// Hashtag + Best Time + Color Picker
+// ======================================
 
 // ===============================
 // Hashtag Generator
@@ -196,39 +198,39 @@ if (hashtagBtn) {
 
   hashtagBtn.addEventListener("click", () => {
 
-    const keyword = document.getElementById("hashtagInput").value.trim();
-    const output = document.getElementById("hashtagOutput");
+    const topic = document.getElementById("topic").value.trim();
+    const output = document.getElementById("output");
 
-    if (!keyword) {
-      output.innerHTML = "⚠️ Please enter a keyword.";
+    if (!topic) {
+      output.innerHTML = "⚠️ Please enter a topic.";
       return;
     }
 
     output.innerHTML = `
       <h3>🔥 Trending Hashtags</h3>
 
-      #${keyword}
-      #${keyword}reels
-      #${keyword}viral
-      #${keyword}video
-      #${keyword}edit
-      #instagram
-      #reels
-      #viral
-      #explore
-      #explorepage
-      #trending
-      #fyp
+      <p>
+      #${topic}<br>
+      #${topic}Reels<br>
+      #${topic}Video<br>
+      #${topic}Creator<br>
+      #viral<br>
+      #reels<br>
+      #instagram<br>
+      #explore<br>
+      #explorepage<br>
+      #trending<br>
+      #fyp<br>
       #india
-      #creator
-      #contentcreator
+      </p>
     `;
+
   });
 
 }
 
 // ===============================
-// Best Time
+// Best Time Generator
 // ===============================
 
 const bestTimeBtn = document.getElementById("bestTimeBtn");
@@ -237,19 +239,20 @@ if (bestTimeBtn) {
 
   bestTimeBtn.addEventListener("click", () => {
 
-    const result = document.getElementById("bestTimeOutput");
+    const output = document.getElementById("bestTimeOutput");
 
-    result.innerHTML = `
-      <h3>📈 Best Time To Post</h3>
+    output.innerHTML = `
+      <h3>📅 Best Time To Post</h3>
 
-      🌅 Morning : 8 AM - 10 AM<br><br>
+      <p>🌅 Morning : 8:00 AM - 10:00 AM</p>
 
-      🌞 Afternoon : 12 PM - 2 PM<br><br>
+      <p>🌞 Afternoon : 12:00 PM - 2:00 PM</p>
 
-      🌙 Evening : 6 PM - 9 PM<br><br>
+      <p>🌙 Evening : 6:00 PM - 9:00 PM</p>
 
-      ⭐ Best Time : 7:30 PM
+      <p>⭐ Best Time : 7:30 PM</p>
     `;
+
   });
 
 }
@@ -258,18 +261,16 @@ if (bestTimeBtn) {
 // Color Picker
 // ===============================
 
-const colorInput = document.getElementById("colorPicker");
+const colorPicker = document.getElementById("colorPicker");
 
-if (colorInput) {
+if (colorPicker) {
 
-  colorInput.addEventListener("input", () => {
+  colorPicker.addEventListener("input", () => {
 
-    const value = colorInput.value;
+    const colorCode = document.getElementById("colorCode");
 
-    const preview = document.getElementById("colorCode");
-
-    if (preview) {
-      preview.innerHTML = value;
+    if (colorCode) {
+      colorCode.textContent = colorPicker.value;
     }
 
   });
@@ -277,17 +278,3 @@ if (colorInput) {
 }
 
 console.log("✅ ReelCreator AI Loaded Successfully");
-alert("script.js loaded");
-
-const fontBtn = document.getElementById("fontBtn");
-
-if (fontBtn) {
-  alert("Font button found");
-
-  fontBtn.onclick = function () {
-    alert("Button Clicked");
-
-    document.getElementById("fontOutput").innerHTML =
-      "<h3>✅ Working Successfully</h3>";
-  };
-}
