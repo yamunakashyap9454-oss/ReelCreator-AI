@@ -1,60 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Bio Generator | ReelCreator AI</title>
+
 <link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
+<header>
+
+<div class="container">
+
 <nav class="navbar">
-<div class="logo">🚀 ReelCreator AI</div>
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-address-card"></i>
+
+<span>ReelCreator AI</span>
+
+</a>
+
 <ul class="menu">
+
 <li><a href="../index.html">Home</a></li>
-<li><a href="#">Bio AI</a></li>
+
+<li><a href="../index.html#tools">Tools</a></li>
+
 </ul>
+
+<button class="theme-btn">🌙</button>
+
 </nav>
 
+</div>
+
+</header>
+
 <section class="hero">
-<h1>👤 AI Bio Generator</h1>
-<p>Create stylish Instagram bios instantly.</p>
+
+<div class="container">
+
+<div class="hero-content">
+
+<span class="hero-tag">
+✨ AI Bio Generator
+</span>
+
+<h1>Create Amazing Instagram Bio</h1>
+
+<p>
+Generate stylish and professional bios for Instagram, YouTube, Gaming, Business and more.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
 <section class="tools">
+
+<div class="container">
+
 <div class="tool-card">
 
-<h2>Create Bio</h2>
+<h2 style="margin-bottom:25px;">
+🚀 Generate Bio
+</h2>
+<label for="category">Select Category</label>
 
-<label>Category</label>
 <select id="category">
+
 <option>Creator</option>
+<option>Gamer</option>
+<option>Student</option>
 <option>Business</option>
-<option>Gaming</option>
-<option>Photography</option>
-<option>Motivation</option>
+<option>Personal</option>
+
 </select>
 
 <br><br>
 
-<label>Language</label>
+<label for="language">Select Language</label>
+
 <select id="language">
+
 <option>Hindi</option>
-<option>English</option>
 <option>Hinglish</option>
+<option>English</option>
+
 </select>
 
 <br><br>
 
-<button id="bioBtn">
-Generate Bio
+<div class="hero-buttons">
+
+<button
+id="bioBtn"
+class="btn btn-primary">
+
+✨ Generate Bio
+
 </button>
 
-<div id="output"></div>
+<button
+id="copyBioBtn"
+class="btn btn-secondary">
+
+📋 Copy Bio
+
+</button>
 
 </div>
+
+<br>
+
+<div id="output" class="result-box">
+
+✨ Your AI Bio will appear here...
+
+</div>
+
+<div style="margin-top:50px;" class="section-title">
+
+<h2>💡 Tips</h2>
+
+<p>
+✔ Choose the right category.<br>
+✔ Select your preferred language.<br>
+✔ Generate multiple bios and pick the best one.<br>
+✔ Copy and paste directly to your Instagram profile.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+<footer>
+
+<div class="container">
+
+<h3>⚡ ReelCreator AI</h3>
+
+<p>Made with ❤️ by Aditya</p>
+
+<p>© 2026 ReelCreator AI. All Rights Reserved.</p>
+
+</div>
+
+</footer>
 
 <script src="../script.js"></script>
 
