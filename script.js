@@ -79,3 +79,20 @@ if (bioBtn) {
     `;
   });
 }
+const usernameBtn = document.getElementById("usernameBtn");
+
+if (usernameBtn) {
+  usernameBtn.addEventListener("click", () => {
+    const name = document.getElementById("name").value;
+    const output = document.getElementById("output");
+
+    output.innerHTML = `
+    <h3>✨ Username Ideas</h3>
+    <p>@${name}_official</p>
+    <p>@its_${name}</p>
+    <p>@real_${name}</p>
+    <p>@${name}_creator</p>
+    <p>@${name}_007</p>
+    `;
+  });
+}
