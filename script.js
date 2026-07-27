@@ -1003,3 +1003,78 @@ if (copyCtaBtn) {
   });
 
 }
+// ===============================
+// Emoji Suggestion Generator
+// ===============================
+
+const emojiBtn = document.getElementById("emojiBtn");
+
+if (emojiBtn) {
+
+  emojiBtn.addEventListener("click", () => {
+
+    const topic = document.getElementById("emojiTopic").value.trim();
+    const mood = document.getElementById("emojiMood").value;
+    const output = document.getElementById("emojiOutput");
+
+    if (!topic) {
+      output.innerHTML = "⚠️ Please enter a caption or topic.";
+      return;
+    }
+
+    let emojis = "";
+
+    if (mood.includes("Happy")) {
+      emojis = "😊 😄 🎉 🌟 💛 ✨";
+    } else if (mood.includes("Love")) {
+      emojis = "❤️ 💕 😍 🥰 💖 🌹";
+    } else if (mood.includes("Motivational")) {
+      emojis = "🚀 💯 🔥 ⭐ 💪 🎯";
+    } else if (mood.includes("Sad")) {
+      emojis = "🥺 💔 🌧️ 😔 🖤";
+    } else if (mood.includes("Funny")) {
+      emojis = "😂 🤣 😆 🙌 😜";
+    } else if (mood.includes("Travel")) {
+      emojis = "✈️ 🌍 🏝️ 📸 🧳";
+    } else if (mood.includes("Gaming")) {
+      emojis = "🎮 🕹️ 🔥 🏆 👾";
+    } else {
+      emojis = "🎬 🎥 🍿 ✨ 📽️";
+    }
+
+    output.innerHTML = `
+      <h3>😀 Suggested Emojis</h3>
+
+      <p><strong>Topic:</strong> ${topic}</p>
+      <p><strong>Mood:</strong> ${mood}</p>
+
+      <br>
+
+      <div style="font-size:32px;line-height:2;">
+        ${emojis}
+      </div>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Emojis
+// ===============================
+
+const copyEmojiBtn = document.getElementById("copyEmojiBtn");
+
+if (copyEmojiBtn) {
+
+  copyEmojiBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("emojiOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Emojis Copied!");
+
+  });
+
+}
