@@ -1233,3 +1233,78 @@ if (copyViralBtn) {
   });
 
 }
+// ===============================
+// Engagement Calculator
+// ===============================
+
+const engagementBtn = document.getElementById("engagementBtn");
+
+if (engagementBtn) {
+
+  engagementBtn.addEventListener("click", () => {
+
+    const likes = Number(document.getElementById("likes").value) || 0;
+    const comments = Number(document.getElementById("comments").value) || 0;
+    const shares = Number(document.getElementById("shares").value) || 0;
+    const followers = Number(document.getElementById("followers").value) || 0;
+
+    const output = document.getElementById("engagementOutput");
+
+    if (followers <= 0) {
+      output.innerHTML = "⚠️ Please enter a valid follower count.";
+      return;
+    }
+
+    const totalEngagement = likes + comments + shares;
+    const rate = ((totalEngagement / followers) * 100).toFixed(2);
+
+    let rating = "";
+    let tip = "";
+
+    if (rate < 3) {
+      rating = "🔴 Needs Improvement";
+      tip = "Use stronger hooks, better hashtags and post consistently.";
+    } else if (rate < 6) {
+      rating = "🟡 Good";
+      tip = "Good performance! Try improving your CTA to boost engagement.";
+    } else {
+      rating = "🟢 Excellent";
+      tip = "Amazing engagement! Keep posting consistently.";
+    }
+
+    output.innerHTML = `
+      <h3>📊 Engagement Report</h3>
+
+      <p><strong>Total Engagement:</strong> ${totalEngagement}</p>
+      <p><strong>Engagement Rate:</strong> ${rate}%</p>
+      <p><strong>Performance:</strong> ${rating}</p>
+
+      <br>
+
+      <p><strong>💡 Tip:</strong></p>
+      <p>${tip}</p>
+    `;
+
+  });
+
+}
+
+// ===============================
+// Copy Engagement Result
+// ===============================
+
+const copyEngagementBtn = document.getElementById("copyEngagementBtn");
+
+if (copyEngagementBtn) {
+
+  copyEngagementBtn.addEventListener("click", () => {
+
+    const text = document.getElementById("engagementOutput").innerText;
+
+    navigator.clipboard.writeText(text);
+
+    alert("✅ Engagement Report Copied!");
+
+  });
+
+}
