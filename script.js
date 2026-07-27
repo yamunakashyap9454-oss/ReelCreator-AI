@@ -274,3 +274,17 @@ if (colorInput) {
 }
 
 console.log("✅ ReelCreator AI Loaded Successfully");
+alert("script.js loaded");
+
+const fontBtn = document.getElementById("fontBtn");
+
+if (fontBtn) {
+  alert("Font button found");
+
+  fontBtn.onclick = function () {
+    alert("Button Clicked");
+
+    document.getElementById("fontOutput").innerHTML =
+      "<h3>✅ Working Successfully</h3>";
+  };
+}
